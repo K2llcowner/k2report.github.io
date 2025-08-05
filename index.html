@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K2 - Bug Reports</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0a0a0a;
+            font-family: 'Times New Roman', serif;
+            color: #c0a080;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, #1a1a1a 0%, #000 70%);
+            z-index: -2;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            padding: 40px;
+            background: rgba(10, 10, 10, 0.9);
+            border: 1px solid #c0a080;
+            position: relative;
+            z-index: 1;
+        }
+
+        .container::before {
+            content: "";
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(135deg, #c0a080, #8b7355, #c0a080);
+            z-index: -1;
+        }
+
+        .logo {
+            font-size: 2.8rem;
+            font-weight: 300;
+            letter-spacing: 8px;
+            margin-bottom: 40px;
+            color: #c0a080;
+            text-transform: uppercase;
+        }
+
+        .logo i {
+            margin-right: 15px;
+            color: #c0a080;
+        }
+
+        .counter-container {
+            margin: 50px 0;
+            position: relative;
+        }
+
+        .counter {
+            font-size: 8rem;
+            font-weight: 300;
+            color: #c0a080;
+            letter-spacing: 5px;
+            margin: 30px 0;
+            font-family: 'Times New Roman', serif;
+        }
+
+        .label {
+            font-size: 1.8rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+            color: #c0a080;
+            text-transform: uppercase;
+        }
+
+        .divider {
+            width: 60%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #c0a080, transparent);
+            margin: 40px auto;
+        }
+
+        .signature {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 2.5rem;
+            color: #c0a080;
+            margin-top: 30px;
+            letter-spacing: 2px;
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            color: #8b7355;
+        }
+
+        .serial-number {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 0.8rem;
+            color: #555;
+            letter-spacing: 1px;
+        }
+
+        .ornament {
+            position: absolute;
+            font-size: 1.5rem;
+            color: #c0a080;
+        }
+
+        .ornament-top-left {
+            top: 20px;
+            left: 20px;
+        }
+
+        .ornament-top-right {
+            top: 20px;
+            right: 20px;
+        }
+
+        .ornament-bottom-left {
+            bottom: 20px;
+            left: 20px;
+        }
+
+        .ornament-bottom-right {
+            bottom: 20px;
+            right: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2rem;
+            }
+            
+            .counter {
+                font-size: 6rem;
+            }
+            
+            .label {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ornament ornament-top-left">❦</div>
+        <div class="ornament ornament-top-right">❦</div>
+        <div class="ornament ornament-bottom-left">❦</div>
+        <div class="ornament ornament-bottom-right">❦</div>
+        
+        <div class="logo">
+            <i class="fas fa-bug"></i>
+            K2 BUG REPORTING
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="counter-container">
+            <div class="counter">1</div>
+            <div class="label">BUG REPORTED</div>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="signature">Precision Engineering</div>
+        
+        <div class="footer">
+            K2 BUG REPORTING &copy; <span id="current-year"></span> | SWISS MADE QUALITY
+        </div>
+        
+        <div class="serial-number">SERIAL: K2-BR-0001</div>
+    </div>
+
+    <script>
+        // Set current year automatically
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
